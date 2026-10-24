@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вход в лабиринт...</title>
+    <title>また</title>
     <style>
-        /* Черный зловещий фон и центрирование */
         body {
             background-color: #000000;
             color: #ffffff;
@@ -17,26 +16,25 @@
             height: 100vh;
             margin: 0;
             overflow: hidden;
-            user-select: none; /* Чтобы игрок не мог выделить текст */
+            user-select: none;
         }
 
         h1 {
             font-size: 2rem;
-            color: #8b0000; /* Кроваво-красный цвет */
+            color: #8b0000;
             text-shadow: 0 0 10px rgba(139, 0, 0, 0.8);
-            animation: flicker 3s infinite; /* Эффект мигания текста */
+            animation: flicker 3s infinite; 
         }
 
         .room-container {
             text-align: center;
         }
 
-        /* Невидимая кнопка-ловушка */
         .secret-door {
             display: inline-block;
             margin-top: 30px;
             padding: 15px 30px;
-            color: #222; /* Почти сливается с фоном */
+            color: #222;
             border: 1px solid #111;
             background: transparent;
             cursor: pointer;
@@ -44,14 +42,13 @@
             transition: all 0.5s ease;
         }
 
-        /* Кнопка слегка проявляется, только если навести мышь */
+
         .secret-door:hover {
             color: #ff0000;
             border-color: #ff0000;
             box-shadow: 0 0 15px #ff0000;
         }
 
-        /* Анимация мигания света */
         @keyframes flicker {
             0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
             20%, 24%, 55% { opacity: 0; }
@@ -61,17 +58,15 @@
 <body>
 
     <div class="room-container">
-        <h1>ТЫ УВЕРЕН, ЧТО ХОЧЕШЬ ВОЙТИ?</h1>
-        <p>В этой комнате темно. Но где-то здесь есть проход...</p>
+        <h1>スタート</h1>
+        <p>ㅤ</p>
         
-        <!-- Ссылка ведет на следующую страницу (которую вы создадите позже) -->
-        <a href="room2.html" class="secret-door">Искать выход</a>
+        <a href="room2.html" class="secret-door">ㅤ</a>
     </div>
 
     <script>
-        // Небольшой JavaScript секрет: если игрок нажмет клавишу F12 или "F", в консоли будет подсказка
         document.addEventListener('keydown', function(event) {
-            console.log("Ты ищешь подсказки? Наведи мышь пониже текста...");
+            console.log("去る去る去る去る去る去る去る去る去る去る去る去る去る去る去る");
         });
     </script>
 
