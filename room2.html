@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Комната Тьмы...</title>
+    <style>
+        body {
+            background-color: #050505;
+            color: #555;
+            font-family: monospace;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: cell; /* Курсор в виде прицела/крестика для поиска */
+        }
+
+        /* Зона ловушки: если кликнуть мимо глаз на пустой экран */
+        .void-clicker {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+        }
+
+        /* Прячущиеся во тьме глаза */
+        .hidden-eyes {
+            position: absolute;
+            top: 40%; /* Глаза будут примерно по центру */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 40px;
+            opacity: 0; /* Полностью невидимы сначала */
+            z-index: 10; /* Находятся поверх ловушки */
+            transition: opacity 0.2s ease;
+            cursor: pointer;
+            text-align: center;
+            font-size: 2rem;
+            letter-spacing: 10px;
+            color: #ff0000;
+        }
+
+        /* Глаза зловеще проявляются, только когда мышка ОЧЕНЬ близко или прямо на них */
+        .hidden-eyes:hover {
+            opacity: 1;
+            text-shadow: 0 0 20px #ff0000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Если кликнуть в любое пустое место, сработает ловушка -->
+    <a href="index.html" class="void-clicker"></a>
+
+    <!-- А это скрытый проход дальше. Пока оставим заглушку '#' -->
+    <div class="hidden-eyes" onclick="nextRoom()">👁️ 👁️</div>
+
+    <script>
+        function nextRoom() {
+            alert("Вы нашли проход в третью комнату! (Код сработал)");
+            // Сюда потом вставим переход на room3.html:
+            // window.location.href = "room3.html";
+        }
+    </script>
+
+</body>
+</html>
